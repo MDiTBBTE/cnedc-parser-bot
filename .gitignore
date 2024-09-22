@@ -1,0 +1,9 @@
+node_modules/
+.env
+examples-to-train-bot/
+output/
+output-msg/
+uploaded/
+
+# macOS
+.DS_Store

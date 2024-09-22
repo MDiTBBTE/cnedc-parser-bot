@@ -1,0 +1,20 @@
+{
+  "name": "telegram-bot-parser",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "fs": "^0.0.1-security",
+    "grammy": "^1.30.0",
+    "nodemon": "^3.1.6",
+    "path": "^0.12.7"
+  }
+}
