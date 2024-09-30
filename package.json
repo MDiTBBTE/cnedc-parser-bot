@@ -1,20 +1,31 @@
 {
   "name": "telegram-bot-parser",
   "version": "1.0.0",
-  "main": "index.js",
+  "type": "module",
+  "main": "src/index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@grammyjs/i18n": "^1.1.2",
+    "@grammyjs/runner": "^2.0.3",
+    "@grammyjs/storage-free": "^2.4.2",
     "axios": "^1.7.7",
+    "crypto": "^1.0.1",
     "dotenv": "^16.4.5",
-    "fs": "^0.0.1-security",
+    "eslint": "^9.11.1",
     "grammy": "^1.30.0",
-    "nodemon": "^3.1.6",
-    "path": "^0.12.7"
+    "mongodb": "^6.9.0",
+    "mongoose": "^8.6.3",
+    "path": "^0.12.7",
+    "prettier": "^3.3.3"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^9.1.0",
+    "nodemon": "^3.1.6"
   }
 }
