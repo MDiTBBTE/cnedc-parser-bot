@@ -50,6 +50,12 @@ export const getSettingsKeyboard = async (ctx) => {
     .url(await ctx.t("profile.support"), "https://t.me/twint2/message");
 };
 
+export const getTopUpKeyboard = async (ctx) => {
+  return new InlineKeyboard()
+    .text(await ctx.t("profile.top_up_balance"), TOP_UP_BALANCE_KEYBOARD_VALUE)
+    .row();
+};
+
 export const getProfileActionsKeyboard = async (ctx) => {
   return new InlineKeyboard()
     .text(await ctx.t("profile.uploaded_files"), UPLOADED_FILES_KEYBOARD_VALUE)

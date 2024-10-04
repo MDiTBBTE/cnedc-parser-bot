@@ -8,6 +8,7 @@ import {
   updateUserParsesByTelegramId,
   hasUserEnoughParsesByTelegramId,
 } from "../../database/operations/users.js";
+import { getTopUpKeyboard } from "./keyboard.js";
 
 dotenv.config();
 
@@ -53,13 +54,11 @@ export const processMessageUpload = async (ctx) => {
 
   // TODO: parse anyway
   if (!hasUserEnoughParses) {
-    return ctx.reply(ctx.t("error.not_enough_parses"));
+    const TOP_UP_KEYBOARD = await getTopUpKeyboard(ctx);
+    return ctx.reply(ctx.t("error.not_enough_parses"), {
+      reply_markup: TOP_UP_KEYBOARD,
+    });
   }
-
-  await ctx.react("⚡");
-  await ctx.reply(ctx.t("general.precessing"), {
-    reply_to_message_id: ctx.message.message_id,
-  });
 
   const text = ctx.message.text;
   const parsedData = parseCardDetails(text);
@@ -103,7 +102,10 @@ export const processFileUpload = async (ctx) => {
 
   // TODO: parse anyway
   if (!hasUserEnoughParses) {
-    return ctx.reply(ctx.t("error.not_enough_parses"));
+    const TOP_UP_KEYBOARD = await getTopUpKeyboard(ctx);
+    return ctx.reply(ctx.t("error.not_enough_parses"), {
+      reply_markup: TOP_UP_KEYBOARD,
+    });
   }
 
   await ctx.reply(ctx.t("general.precessing"), {

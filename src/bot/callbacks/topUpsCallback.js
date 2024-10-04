@@ -54,7 +54,10 @@ export const topUpsCallback = async (ctx) => {
         amount: requestedTopUpAmount,
         url: cryptomusInvoiceResponseData.result.url,
       }),
-      { disable_web_page_preview: true }
+      {
+        parse_mode: "HTML",
+        disable_web_page_preview: true,
+      }
     );
   }
 
@@ -62,6 +65,10 @@ export const topUpsCallback = async (ctx) => {
     ctx.t("profile.top_up_message", {
       requestedTopUpPrice,
       requestedTopUpAmount,
-    })
+    }),
+    {
+      parse_mode: "HTML",
+      disable_web_page_preview: true,
+    }
   );
 };

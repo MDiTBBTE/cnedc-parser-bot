@@ -5,12 +5,12 @@ start_language = 🌐 What language u prefer?
 
 info =
   ☘️ We strive to make our product as useful as possible for you!
-  If you have any <strong>ideas</strong> or <strong>suggestions</strong> for improvement, please write to us at @bot_support.
+  If you have any <strong>ideas</strong> or <strong>suggestions</strong> for improvement, please write to us at <a target="_self" href="https://t.me/twint2/message">@support</a>.
   🫶 We would love to hear your feedback!
 
   ☕️ Want to support us?
-  |- TRC20: TDjrQjQrkuxCi1kisbadKSfxxvcJkubx2j
-  |- Polygon: 0x049361d4146eaac592e07983c8ee27c8f8447ca6
+  |- TRC20(USDT): TDjrQjQrkuxCi1kisbadKSfxxvcJkubx2j
+  |- Polygon(USDT): 0x049361d4146eaac592e07983c8ee27c8f8447ca6
 
 language =
   .specify-a-locale = Please specify a locale. Example is /language en.
@@ -42,17 +42,17 @@ profile =
   .top_up_350_2000_balance = 2000 parses = 350$
   .top_up_message =
     You can choose the network that works best for you:
-    |- TRC20: TDjrQjQrkuxCi1kisbadKSfxxvcJkubx2j
-    |- Polygon: 0x049361d4146eaac592e07983c8ee27c8f8447ca6
+    |- TRC20(USDT): TDjrQjQrkuxCi1kisbadKSfxxvcJkubx2j
+    |- Polygon(USDT): 0x049361d4146eaac592e07983c8ee27c8f8447ca6
 
-    Once you have made your transfer, please send us @bot_support a screenshot of the payment! 📸
+    Once you have made your transfer, please send us <a target="_self" href="https://t.me/twint2/message">@support</a> a screenshot of the payment! 📸
 
     ‼️ The transfer amount should match the one in the package you selected ({ $requestedTopUpAmount } parses = { $requestedTopUpPrice }$)
   .top_up_message_cryptomus =
     You can choose the network that works best for you:
-    |- TRC20: TDjrQjQrkuxCi1kisbadKSfxxvcJkubx2j
-    |- Polygon: 0x049361d4146eaac592e07983c8ee27c8f8447ca6
-    Once you have made your transfer, please send us @bot_support a screenshot of the payment! 📸
+    |- TRC20(USDT): TDjrQjQrkuxCi1kisbadKSfxxvcJkubx2j
+    |- Polygon(USDT): 0x049361d4146eaac592e07983c8ee27c8f8447ca6
+    Once you have made your transfer, please send us <a target="_self" href="https://t.me/twint2/message">@support</a> a screenshot of the payment! 📸
 
     💳 Or you can pay with Cryptomus using this link: { $url } 🔗✨
 
@@ -97,9 +97,13 @@ admin =
     |- ID: { $id }  
     |- ПАКЕТ: { $amount } парсингів = { $price }$
 
+checker =
+  .msg_reply = 
+    ✨ Your results after quick card check ✨ { $result }
+
 instruction =
   🏷 Instructions for card data parsing
-  Welcome to @parse_some_data_bot! 🎉 This bot makes it super easy to parse card numbers, expiration dates, and CVV codes! 🏦✨
+  Welcome to { $bot_name }! 🎉 This bot makes it super easy to parse card numbers, expiration dates, and CVV codes! 🏦✨
 
   You can send your data as a message or upload a file for parsing.
 
@@ -108,11 +112,13 @@ instruction =
 
   🏷 Instructions for card checking
   The Card Checker can verify up to 100 cards in a single message! Just make sure to put one card per line. For example, to check 3 cards, send:
+  <code>#RUN_CHECKER
   5178059938197446|1225|241
-  4147805993819742|1224|658
-  5123051838137448|1226|723
+  4439137293801323|12/24|658
+  5123051838137448|12|26|723
+  </code>
 
   File Upload:
   You can also send data for verification in a file of up to 16MB. Just upload a .txt file, ensuring the data format matches what you’d send in a message.
 
-  Happy parsing or checking! If you have any questions, feel free to ask @bot_support! 💬✨
+  Happy parsing or checking! If you have any questions, feel free to ask <a target="_self" href="https://t.me/twint2/message">@support</a>! 💬✨

@@ -11,6 +11,7 @@ import { aboutUsCommand } from "./commands/aboutUsCommand.js";
 import { languageCallback } from "./callbacks/languageCallback.js";
 import { hasTopUpsValues, topUpsCallback } from "./callbacks/topUpsCallback.js";
 import { hasToParseTextOrHTML } from "../bot/utils/parsers.js";
+import { validateCardList, hasToValidCardInput } from "../bot/utils/checker.js";
 import {
   processMessageUpload,
   processFileUpload,
@@ -86,6 +87,14 @@ bot.on("message:text", async (ctx) => {
 
   if (ctx.message.text.startsWith("download_parsed-")) {
     return await processFileDownload(ctx);
+  }
+
+  if (hasToValidCardInput(ctx.message.text)) {
+    return await ctx.reply(
+      ctx.t("checker.msg_reply", {
+        result: validateCardList(ctx.message.text),
+      })
+    );
   }
 
   if (hasToParseTextOrHTML(ctx.message.text)) {
